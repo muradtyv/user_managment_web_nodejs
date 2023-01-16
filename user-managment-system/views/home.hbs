@@ -1,0 +1,47 @@
+
+    <div class="container pt-5 pb-5">
+        {{{body}}}
+    </div>
+
+    <div class="row">
+        <div class = "col-6"><h1>Users</h1></div>
+        <div class="col-6  justify-content-end">
+            <a href="/adduser" type="button" class="btn btn-primary align-self-center">Add User</a>
+        </div>
+    </div>
+
+    <table>
+        <thead>
+            <tr>
+                <th>#</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each result}}
+            <tr>
+                <th>{{this.id}}</th>
+                <td>{{this.first_name}}</td>
+                <td>{{this.last_name}}</td>
+                <td>{{this.email}}</td>
+                <td>{{this.phone}}</td>
+                <td>
+                    <a href="#" type="button">View</a>
+                    <a href="#" type="button">Edit</a>
+                    <a href="#" type="button">Delete</a>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
