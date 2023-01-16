@@ -17,7 +17,7 @@
                 <th>First Name</th>
                 <th>Last Name</th>
                 <th>Email</th>
-                <th>Phone</th>
+                {{!-- <th>Phone</th> --}}
                 <th>Action</th>
             </tr>
         </thead>
@@ -28,11 +28,11 @@
                 <td>{{this.first_name}}</td>
                 <td>{{this.last_name}}</td>
                 <td>{{this.email}}</td>
-                <td>{{this.phone}}</td>
+                {{!-- <td>{{this.phone}}</td> --}}
                 <td>
-                    <a href="#" type="button">View</a>
-                    <a href="#" type="button">Edit</a>
-                    <a href="#" type="button">Delete</a>
+                    <a href="/viewuser/{{this.id}}" type="button">View</a>
+                    <a href="/edituser/{{this.id}}" type="button">Edit</a>
+                    <a href="{{this.id}}" type="button">Delete</a>
                 </td>
             </tr>
             {{/each}}
